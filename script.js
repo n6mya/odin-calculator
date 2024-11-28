@@ -20,16 +20,16 @@ function addNumber(number){
     tempArray.push(number);
 }
 
-const numOne = document.querySelector('.one');
-const numTwo = document.querySelector('.two');
-const numThree = document.querySelector('.three');
-const numFour = document.querySelector('.four');
-const numFive = document.querySelector('.five');
-const numSix = document.querySelector('.six');
-const numSeven = document.querySelector('.seven');
-const numEight = document.querySelector('.eight');
-const numNine = document.querySelector('.nine');
-const numZero = document.querySelector('.zero');
+const numOne = document.querySelector('#one');
+const numTwo = document.querySelector('#two');
+const numThree = document.querySelector('#three');
+const numFour = document.querySelector('#four');
+const numFive = document.querySelector('#five');
+const numSix = document.querySelector('#six');
+const numSeven = document.querySelector('#seven');
+const numEight = document.querySelector('#eight');
+const numNine = document.querySelector('#nine');
+const numZero = document.querySelector('#zero');
 
 numOne.addEventListener("click", addNumber(1));
 numTwo.addEventListener("click", addNumber(2));

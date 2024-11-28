@@ -56,7 +56,8 @@ equals.onclick = () => {
     tempArray.join('');
     number_2 = parseInt(tempArray);
     tempArray = [];
-    
+    results = operate(number_1, number_2, operator);
+    display.textContent = results;
 }
 
 let display = document.querySelector('.numberdisplay');

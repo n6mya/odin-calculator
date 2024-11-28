@@ -60,4 +60,4 @@ equals.addEventListener("click", () => {
     display.textContent = results;
 });
 
-let display = document.querySelector('.numberdisplay');
+let display = document.querySelector('#numberdisplay');

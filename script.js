@@ -14,6 +14,7 @@ let number_1 = 0;
 let number_2 = 0;
 let operator = '';
 let tempArray = [];
+let results = 0;
 
 function addNumber(number){
     tempArray.push(number);
@@ -42,10 +43,20 @@ numNine.onclick = addNumber(9);
 numZero.onclick = addNumber(0);
 
 const plus = document.querySelector('.plus');
+const equals = document.querySelector('.equals');
 
 plus.onclick = () => {
     tempArray.join('');
     number_1 = parseInt(tempArray);
+    tempArray = [];
+    operator = '+';
+}
+
+equals.onclick = () => {
+    tempArray.join('');
+    number_2 = parseInt(tempArray);
+    tempArray = [];
+    
 }
 
 let display = document.querySelector('.numberdisplay');

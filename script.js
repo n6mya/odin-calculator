@@ -41,4 +41,11 @@ numEight.onclick = addNumber(8);
 numNine.onclick = addNumber(9);
 numZero.onclick = addNumber(0);
 
+const plus = document.querySelector('.plus');
+
+plus.onclick = () => {
+    tempArray.join('');
+    number_1 = parseInt(tempArray);
+}
+
 let display = document.querySelector('.numberdisplay');

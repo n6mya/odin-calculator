@@ -83,6 +83,27 @@ plus.addEventListener("click", () => {
     operator = '+';
 });
 
+minus.addEventListener("click", () => {
+    tempArray_2 = tempArray_1.join('');
+    number_1 = parseInt(tempArray_2);
+    tempArray_1 = [];
+    operator = '-';
+});
+
+multip.addEventListener("click", () => {
+    tempArray_2 = tempArray_1.join('');
+    number_1 = parseInt(tempArray_2);
+    tempArray_1 = [];
+    operator = '*';
+});
+
+divid.addEventListener("click", () => {
+    tempArray_2 = tempArray_1.join('');
+    number_1 = parseInt(tempArray_2);
+    tempArray_1 = [];
+    operator = '/';
+});
+
 equals.addEventListener("click", () => {
     tempArray_2 = tempArray_1.join('');
     number_2 = parseInt(tempArray_2);

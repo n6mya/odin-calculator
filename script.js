@@ -25,6 +25,13 @@ function addNumber(number){
     display.textContent = displayTemp;
 }
 
+function delNumber(){
+    tempArray_1.pop();
+    console.log(tempArray_1);
+    displayTemp = tempArray_1.join('');
+    display.textContent = displayTemp;
+}
+
 const numOne = document.querySelector('#one');
 const numTwo = document.querySelector('#two');
 const numThree = document.querySelector('#three');
@@ -35,6 +42,7 @@ const numSeven = document.querySelector('#seven');
 const numEight = document.querySelector('#eight');
 const numNine = document.querySelector('#nine');
 const numZero = document.querySelector('#zero');
+const delKey = document.querySelector('#delete');
 
 numOne.addEventListener("click", function(){addNumber(1)});
 numTwo.addEventListener("click", function(){addNumber(2)});
@@ -46,6 +54,8 @@ numSeven.addEventListener("click", function(){addNumber(7)});
 numEight.addEventListener("click", function(){addNumber(8)});
 numNine.addEventListener("click", function(){addNumber(9)});
 numZero.addEventListener("click", function(){addNumber(0)});
+delKey.addEventListener("click", function(){delNumber()});
+
 
 const plus = document.querySelector('#plus');
 const equals = document.querySelector('#equals');

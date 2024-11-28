@@ -31,16 +31,16 @@ const numEight = document.querySelector('.eight');
 const numNine = document.querySelector('.nine');
 const numZero = document.querySelector('.zero');
 
-numOne.onclick = addNumber(1);
-numTwo.onclick = addNumber(2);
-numThree.onclick = addNumber(3);
-numFour.onclick = addNumber(4);
-numFive.onclick = addNumber(5);
-numSix.onclick = addNumber(6);
-numSeven.onclick = addNumber(7);
-numEight.onclick = addNumber(8);
-numNine.onclick = addNumber(9);
-numZero.onclick = addNumber(0);
+numOne.addEventListener("click", addNumber(1));
+numTwo.addEventListener("click", addNumber(2));
+numThree.addEventListener("click", addNumber(3));
+numFour.addEventListener("click", addNumber(4));
+numFive.addEventListener("click", addNumber(5));
+numSix.addEventListener("click", addNumber(6));
+numSeven.addEventListener("click", addNumber(7));
+numEight.addEventListener("click", addNumber(8));
+numNine.addEventListener("click", addNumber(9));
+numZero.addEventListener("click", addNumber(0));
 
 const plus = document.querySelector('.plus');
 const equals = document.querySelector('.equals');

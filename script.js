@@ -45,19 +45,19 @@ numZero.addEventListener("click", addNumber(0));
 const plus = document.querySelector('.plus');
 const equals = document.querySelector('.equals');
 
-plus.onclick = () => {
+plus.addEventListener("click", () => {
     tempArray.join('');
     number_1 = parseInt(tempArray);
     tempArray = [];
     operator = '+';
-}
+});
 
-equals.onclick = () => {
+equals.addEventListener("click", () => {
     tempArray.join('');
     number_2 = parseInt(tempArray);
     tempArray = [];
     results = operate(number_1, number_2, operator);
     display.textContent = results;
-}
+});
 
 let display = document.querySelector('.numberdisplay');

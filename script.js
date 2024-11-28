@@ -13,12 +13,13 @@ function operate(number_1, number_2, operator){
 let number_1 = 0;
 let number_2 = 0;
 let operator = '';
-let tempArray = [];
+let tempArray_1 = [];
+let tempArray_2 = [];
 let results = 0;
 
 function addNumber(number){
-    tempArray.push(number);
-    console.log(tempArray);
+    tempArray_1.push(number);
+    console.log(tempArray_1);
 }
 
 const numOne = document.querySelector('#one');
@@ -47,16 +48,17 @@ const plus = document.querySelector('#plus');
 const equals = document.querySelector('#equals');
 
 plus.addEventListener("click", () => {
-    tempArray.join('');
-    number_1 = parseInt(tempArray);
-    tempArray = [];
+    tempArray_2 = tempArray_1.join('');
+    number_1 = parseInt(tempArray_2);
+    tempArray_1 = [];
     operator = '+';
 });
 
 equals.addEventListener("click", () => {
-    tempArray.join('');
-    number_2 = parseInt(tempArray);
-    tempArray = [];
+    tempArray_2 = tempArray_1.join('');
+    number_2 = parseInt(tempArray_2);
+    tempArray_1 = [];
+    tempArray_2 = [];
     results = operate(number_1, number_2, operator);
     display.textContent = results;
 });

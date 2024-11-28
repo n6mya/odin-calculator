@@ -95,24 +95,57 @@ plus.addEventListener("click", () => {
 });
 
 minus.addEventListener("click", () => {
-    tempArray_2 = tempArray_1.join('');
-    number_1 = parseInt(tempArray_2);
-    tempArray_1 = [];
-    operator = '-';
+    if (number_1 == 0){
+        tempArray_2 = tempArray_1.join('');
+        number_1 = parseInt(tempArray_2);
+        tempArray_1 = [];
+        operator = '-';
+    } else {
+        tempArray_2 = tempArray_1.join('');
+        number_2 = parseInt(tempArray_2);
+        tempArray_1 = [];
+        tempArray_2 = [];
+        results = operate(number_1, number_2, operator);
+        display.textContent = results;
+        number_1 = results;
+        number_2 = 0;
+    }
 });
 
 multip.addEventListener("click", () => {
-    tempArray_2 = tempArray_1.join('');
-    number_1 = parseInt(tempArray_2);
-    tempArray_1 = [];
-    operator = '*';
+    if (number_1 == 0){
+        tempArray_2 = tempArray_1.join('');
+        number_1 = parseInt(tempArray_2);
+        tempArray_1 = [];
+        operator = '*';
+    } else {
+        tempArray_2 = tempArray_1.join('');
+        number_2 = parseInt(tempArray_2);
+        tempArray_1 = [];
+        tempArray_2 = [];
+        results = operate(number_1, number_2, operator);
+        display.textContent = results;
+        number_1 = results;
+        number_2 = 0;
+    }
 });
 
 divid.addEventListener("click", () => {
-    tempArray_2 = tempArray_1.join('');
-    number_1 = parseInt(tempArray_2);
-    tempArray_1 = [];
-    operator = '/';
+    if (number_1 == 0){
+        tempArray_2 = tempArray_1.join('');
+        number_1 = parseInt(tempArray_2);
+        tempArray_1 = [];
+        operator = '/';
+    } else {
+        tempArray_2 = tempArray_1.join('');
+        number_2 = parseInt(tempArray_2);
+        tempArray_1 = [];
+        tempArray_2 = [];
+        results = operate(number_1, number_2, operator);
+        display.textContent = results;
+        number_1 = results;
+        number_2 = 0;
+    }
 });
 
 equals.addEventListener("click", () => {

@@ -42,8 +42,8 @@ numEight.addEventListener("click", addNumber(8));
 numNine.addEventListener("click", addNumber(9));
 numZero.addEventListener("click", addNumber(0));
 
-const plus = document.querySelector('.plus');
-const equals = document.querySelector('.equals');
+const plus = document.querySelector('#plus');
+const equals = document.querySelector('#equals');
 
 plus.addEventListener("click", () => {
     tempArray.join('');

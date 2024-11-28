@@ -16,6 +16,7 @@ let operator = '';
 let tempArray_1 = [];
 let tempArray_2 = [];
 let results = 0;
+let displayTemp = 0;
 
 function addNumber(number){
     tempArray_1.push(number);

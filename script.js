@@ -21,6 +21,8 @@ let displayTemp = 0;
 function addNumber(number){
     tempArray_1.push(number);
     console.log(tempArray_1);
+    displayTemp = tempArray_1.join('');
+    display.textContent = displayTemp;
 }
 
 const numOne = document.querySelector('#one');

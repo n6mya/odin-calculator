@@ -73,7 +73,7 @@ clearKey.addEventListener("click", function(){clearAll()});
 const plus = document.querySelector('#plus');
 const minus = document.querySelector('#minus');
 const multip = document.querySelector('#multiply');
-const divide = document.querySelector('#divide');
+const divid = document.querySelector('#divide');
 const equals = document.querySelector('#equals');
 
 plus.addEventListener("click", () => {

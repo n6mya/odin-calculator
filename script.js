@@ -32,5 +32,13 @@ const numZero = document.querySelector('.0');
 
 numOne.onclick = addNumber(1);
 numTwo.onclick = addNumber(2);
+numThree.onclick = addNumber(3);
+numFour.onclick = addNumber(4);
+numFive.onclick = addNumber(5);
+numSix.onclick = addNumber(6);
+numSeven.onclick = addNumber(7);
+numEight.onclick = addNumber(8);
+numNine.onclick = addNumber(9);
+numZero.onclick = addNumber(0);
 
 let display = document.querySelector('.numberdisplay');

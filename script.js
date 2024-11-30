@@ -55,6 +55,7 @@ const numNine = document.querySelector('#nine');
 const numZero = document.querySelector('#zero');
 const delKey = document.querySelector('#delete');
 const clearKey = document.querySelector('#clear');
+const commaKey = document.querySelector('#comma');
 
 numOne.addEventListener("click", function(){addNumber(1)});
 numTwo.addEventListener("click", function(){addNumber(2)});
@@ -68,7 +69,7 @@ numNine.addEventListener("click", function(){addNumber(9)});
 numZero.addEventListener("click", function(){addNumber(0)});
 delKey.addEventListener("click", function(){delNumber()});
 clearKey.addEventListener("click", function(){clearAll()});
-
+commaKey.addEventListener("click", function(){addNumber('.')})
 
 const plus = document.querySelector('#plus');
 const minus = document.querySelector('#minus');
@@ -79,12 +80,12 @@ const equals = document.querySelector('#equals');
 plus.addEventListener("click", () => {
     if (number_1 == 0){
         tempArray_2 = tempArray_1.join('');
-        number_1 = parseInt(tempArray_2);
+        number_1 = parseFloat(tempArray_2);
         tempArray_1 = [];
         operator = '+';
     } else {
         tempArray_2 = tempArray_1.join('');
-        number_2 = parseInt(tempArray_2);
+        number_2 = parseFloat(tempArray_2);
         tempArray_1 = [];
         tempArray_2 = [];
         results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
@@ -97,12 +98,12 @@ plus.addEventListener("click", () => {
 minus.addEventListener("click", () => {
     if (number_1 == 0){
         tempArray_2 = tempArray_1.join('');
-        number_1 = parseInt(tempArray_2);
+        number_1 = parseFloat(tempArray_2);
         tempArray_1 = [];
         operator = '-';
     } else {
         tempArray_2 = tempArray_1.join('');
-        number_2 = parseInt(tempArray_2);
+        number_2 = parseFloat(tempArray_2);
         tempArray_1 = [];
         tempArray_2 = [];
         results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
@@ -115,12 +116,12 @@ minus.addEventListener("click", () => {
 multip.addEventListener("click", () => {
     if (number_1 == 0){
         tempArray_2 = tempArray_1.join('');
-        number_1 = parseInt(tempArray_2);
+        number_1 = parseFloat(tempArray_2);
         tempArray_1 = [];
         operator = '*';
     } else {
         tempArray_2 = tempArray_1.join('');
-        number_2 = parseInt(tempArray_2);
+        number_2 = parseFloat(tempArray_2);
         tempArray_1 = [];
         tempArray_2 = [];
         results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
@@ -133,12 +134,12 @@ multip.addEventListener("click", () => {
 divid.addEventListener("click", () => {
     if (number_1 == 0){
         tempArray_2 = tempArray_1.join('');
-        number_1 = parseInt(tempArray_2);
+        number_1 = parseFloat(tempArray_2);
         tempArray_1 = [];
         operator = '/';
     } else {
         tempArray_2 = tempArray_1.join('');
-        number_2 = parseInt(tempArray_2);
+        number_2 = parseFloat(tempArray_2);
         tempArray_1 = [];
         tempArray_2 = [];
         results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
@@ -150,7 +151,7 @@ divid.addEventListener("click", () => {
 
 equals.addEventListener("click", () => {
     tempArray_2 = tempArray_1.join('');
-    number_2 = parseInt(tempArray_2);
+    number_2 = parseFloat(tempArray_2);
     tempArray_1 = [];
     tempArray_2 = [];
     results = parseFloat(operate(number_1, number_2, operator).toFixed(3));

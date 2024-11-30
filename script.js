@@ -143,6 +143,59 @@ document.addEventListener("keydown", function(e){
                 addNumber('.');
             };
             break;
+        case "+":
+            if (number_1 == 0){
+                storeNumberOne();
+                operator = '+';
+            } else {
+                if (number_1 != 0 && tempArray_1.length != 0){
+                    sum();
+                }
+                operator = '+';
+            };
+            break;
+        case "-":
+            if (number_1 == 0){
+                storeNumberOne();
+                operator = '-';
+            } else {
+                if (number_1 != 0 && tempArray_1.length != 0){
+                    sum();
+                }
+                operator = '-';
+            };
+            break;
+        case "*":
+            if (number_1 == 0){
+                storeNumberOne();
+                operator = '*';
+            } else {
+                if (number_1 != 0 && tempArray_1.length != 0){
+                    sum();
+                }
+                operator = '*';
+            };
+            break;
+        case "/":
+            if (number_1 == 0){
+                storeNumberOne();
+                operator = '/';
+            } else {
+                if (number_1 != 0 && tempArray_1.length != 0){
+                    sum();
+                }
+                operator = '/';
+            };
+            break;
+        case "Enter":
+            if (operator == "/" && parseFloat(tempArray_1.join('')) == 0){
+                alert("Cannot divide by 0");
+            } else {
+                if (number_1 != 0 && tempArray_1.length != 0){
+                    sum();
+                }
+            };
+            break;
     }
 })
 

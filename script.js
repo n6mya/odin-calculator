@@ -69,7 +69,11 @@ numNine.addEventListener("click", function(){addNumber(9)});
 numZero.addEventListener("click", function(){addNumber(0)});
 delKey.addEventListener("click", function(){delNumber()});
 clearKey.addEventListener("click", function(){clearAll()});
-commaKey.addEventListener("click", function(){addNumber('.')})
+commaKey.addEventListener("click", function(){
+    if (!tempArray_1.includes('.')){
+        addNumber('.')
+    }
+});
 
 const plus = document.querySelector('#plus');
 const minus = document.querySelector('#minus');

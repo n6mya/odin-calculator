@@ -1,7 +1,21 @@
+const plus = document.querySelector('#plus');
+const minus = document.querySelector('#minus');
+const multip = document.querySelector('#multiply');
+const divid = document.querySelector('#divide');
+const equals = document.querySelector('#equals');
+
 let add = (num_1, num_2) => num_1 + num_2;
 let subtract = (num_1, num_2) => num_1 - num_2;
 let multiply = (num_1, num_2) => num_1 * num_2;
 let divide = (num_1, num_2) => num_1 / num_2;
+
+let number_1 = 0;
+let number_2 = 0;
+let operator = '';
+let tempArray_1 = [];
+let tempArray_2 = [];
+let results = 0;
+let displayTemp = 0;
 
 let display = document.querySelector('#numberdisplay');
 
@@ -20,6 +34,7 @@ function sum(){
     results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
     display.textContent = results;
     number_1 = results;
+    operator = '';
 }
 
 function storeNumberOne(){
@@ -27,14 +42,6 @@ function storeNumberOne(){
     number_1 = parseFloat(tempArray_2);
     tempArray_1 = [];
 }
-
-let number_1 = 0;
-let number_2 = 0;
-let operator = '';
-let tempArray_1 = [];
-let tempArray_2 = [];
-let results = 0;
-let displayTemp = 0;
 
 function addNumber(number){
     tempArray_1.push(number);
@@ -139,12 +146,6 @@ document.addEventListener("keydown", function(e){
     }
 })
 
-const plus = document.querySelector('#plus');
-const minus = document.querySelector('#minus');
-const multip = document.querySelector('#multiply');
-const divid = document.querySelector('#divide');
-const equals = document.querySelector('#equals');
-
 plus.addEventListener("click", () => {
     if (number_1 == 0){
         storeNumberOne();
@@ -153,6 +154,7 @@ plus.addEventListener("click", () => {
         if (number_1 != 0 && tempArray_1.length != 0){
             sum();
         }
+        operator = '+';
     }
 });
 
@@ -164,6 +166,7 @@ minus.addEventListener("click", () => {
         if (number_1 != 0 && tempArray_1.length != 0){
             sum();
         }
+        operator = '-';
     }
 });
 
@@ -175,6 +178,7 @@ multip.addEventListener("click", () => {
         if (number_1 != 0 && tempArray_1.length != 0){
             sum();
         }
+        operator = '*';
     }
 });
 
@@ -186,6 +190,7 @@ divid.addEventListener("click", () => {
         if (number_1 != 0 && tempArray_1.length != 0){
             sum();
         }
+        operator = '/';
     }
 });
 

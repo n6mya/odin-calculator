@@ -158,15 +158,19 @@ divid.addEventListener("click", () => {
 });
 
 equals.addEventListener("click", () => {
-    if (number_1 != 0 && tempArray_1.length != 0){
-        tempArray_2 = tempArray_1.join('');
-        number_2 = parseFloat(tempArray_2);
-        tempArray_1 = [];
-        tempArray_2 = [];
-        results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
-        display.textContent = results;
-        number_1 = results;
-    }
+    if (operator == "/" && parseFloat(tempArray_1.join('')) == 0){
+        alert("Cannot divide by 0");
+    } else {
+        if (number_1 != 0 && tempArray_1.length != 0){
+            tempArray_2 = tempArray_1.join('');
+            number_2 = parseFloat(tempArray_2);
+            tempArray_1 = [];
+            tempArray_2 = [];
+            results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
+            display.textContent = results;
+            number_1 = results;
+        }
+}
 });
 
 let display = document.querySelector('#numberdisplay');

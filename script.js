@@ -3,6 +3,8 @@ let subtract = (num_1, num_2) => num_1 - num_2;
 let multiply = (num_1, num_2) => num_1 * num_2;
 let divide = (num_1, num_2) => num_1 / num_2;
 
+let display = document.querySelector('#numberdisplay');
+
 function operate(number_1, number_2, operator){
     if (operator == "+") return add(number_1, number_2);
     if (operator == "-") return subtract(number_1, number_2);
@@ -18,6 +20,12 @@ function sum(){
     results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
     display.textContent = results;
     number_1 = results;
+}
+
+function storeNumberOne(){
+    tempArray_2 = tempArray_1.join('');
+    number_1 = parseFloat(tempArray_2);
+    tempArray_1 = [];
 }
 
 let number_1 = 0;
@@ -67,6 +75,8 @@ const delKey = document.querySelector('#delete');
 const clearKey = document.querySelector('#clear');
 const commaKey = document.querySelector('#comma');
 
+
+//button click functionality
 numOne.addEventListener("click", function(){addNumber(1)});
 numTwo.addEventListener("click", function(){addNumber(2)});
 numThree.addEventListener("click", function(){addNumber(3)});
@@ -81,9 +91,53 @@ delKey.addEventListener("click", function(){delNumber()});
 clearKey.addEventListener("click", function(){clearAll()});
 commaKey.addEventListener("click", function(){
     if (!tempArray_1.includes('.')){
-        addNumber('.')
+        addNumber('.');
     }
 });
+
+//keyboard functionality
+document.addEventListener("keydown", function(e){
+    switch(e.key){
+        case "1":
+            addNumber(1);
+            break;
+        case "2":
+            addNumber(2);
+            break;
+        case "3":
+            addNumber(3);
+            break;
+        case "4":
+            addNumber(4);
+            break;
+        case "5":
+            addNumber(5);
+            break;
+        case "6":
+            addNumber(6);
+            break;
+        case "7":
+            addNumber(7);
+            break;
+        case "8":
+            addNumber(8);
+            break;
+        case "9":
+            addNumber(9);
+            break;
+        case "0":
+            addNumber(0);
+            break;
+        case "Backspace":
+            delNumber();
+            break;
+        case ".":
+            if (!tempArray_1.includes('.')){
+                addNumber('.');
+            };
+            break;
+    }
+})
 
 const plus = document.querySelector('#plus');
 const minus = document.querySelector('#minus');
@@ -93,29 +147,18 @@ const equals = document.querySelector('#equals');
 
 plus.addEventListener("click", () => {
     if (number_1 == 0){
-        tempArray_2 = tempArray_1.join('');
-        number_1 = parseFloat(tempArray_2);
-        tempArray_1 = [];
+        storeNumberOne();
         operator = '+';
     } else {
         if (number_1 != 0 && tempArray_1.length != 0){
-            tempArray_2 = tempArray_1.join('');
-            number_2 = parseFloat(tempArray_2);
-            tempArray_1 = [];
-            tempArray_2 = [];
-            results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
-            display.textContent = results;
-            number_1 = results;
-            number_2 = 0;
+            sum();
         }
     }
 });
 
 minus.addEventListener("click", () => {
     if (number_1 == 0){
-        tempArray_2 = tempArray_1.join('');
-        number_1 = parseFloat(tempArray_2);
-        tempArray_1 = [];
+        storeNumberOne();
         operator = '-';
     } else {
         if (number_1 != 0 && tempArray_1.length != 0){
@@ -126,9 +169,7 @@ minus.addEventListener("click", () => {
 
 multip.addEventListener("click", () => {
     if (number_1 == 0){
-        tempArray_2 = tempArray_1.join('');
-        number_1 = parseFloat(tempArray_2);
-        tempArray_1 = [];
+        storeNumberOne();
         operator = '*';
     } else {
         if (number_1 != 0 && tempArray_1.length != 0){
@@ -139,9 +180,7 @@ multip.addEventListener("click", () => {
 
 divid.addEventListener("click", () => {
     if (number_1 == 0){
-        tempArray_2 = tempArray_1.join('');
-        number_1 = parseFloat(tempArray_2);
-        tempArray_1 = [];
+        storeNumberOne();
         operator = '/';
     } else {
         if (number_1 != 0 && tempArray_1.length != 0){
@@ -159,5 +198,3 @@ equals.addEventListener("click", () => {
         }
     }
 });
-
-let display = document.querySelector('#numberdisplay');

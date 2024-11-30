@@ -84,14 +84,16 @@ plus.addEventListener("click", () => {
         tempArray_1 = [];
         operator = '+';
     } else {
-        tempArray_2 = tempArray_1.join('');
-        number_2 = parseFloat(tempArray_2);
-        tempArray_1 = [];
-        tempArray_2 = [];
-        results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
-        display.textContent = results;
-        number_1 = results;
-        number_2 = 0;
+        if (number_1 != 0 && tempArray_1.length != 0){
+            tempArray_2 = tempArray_1.join('');
+            number_2 = parseFloat(tempArray_2);
+            tempArray_1 = [];
+            tempArray_2 = [];
+            results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
+            display.textContent = results;
+            number_1 = results;
+            number_2 = 0;
+        }
     }
 });
 
@@ -102,14 +104,16 @@ minus.addEventListener("click", () => {
         tempArray_1 = [];
         operator = '-';
     } else {
-        tempArray_2 = tempArray_1.join('');
-        number_2 = parseFloat(tempArray_2);
-        tempArray_1 = [];
-        tempArray_2 = [];
-        results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
-        display.textContent = results;
-        number_1 = results;
-        number_2 = 0;
+        if (number_1 != 0 && tempArray_1.length != 0){
+            tempArray_2 = tempArray_1.join('');
+            number_2 = parseFloat(tempArray_2);
+            tempArray_1 = [];
+            tempArray_2 = [];
+            results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
+            display.textContent = results;
+            number_1 = results;
+            number_2 = 0;
+        }
     }
 });
 
@@ -120,14 +124,16 @@ multip.addEventListener("click", () => {
         tempArray_1 = [];
         operator = '*';
     } else {
-        tempArray_2 = tempArray_1.join('');
-        number_2 = parseFloat(tempArray_2);
-        tempArray_1 = [];
-        tempArray_2 = [];
-        results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
-        display.textContent = results;
-        number_1 = results;
-        number_2 = 0;
+        if (number_1 != 0 && tempArray_1.length != 0){
+            tempArray_2 = tempArray_1.join('');
+            number_2 = parseFloat(tempArray_2);
+            tempArray_1 = [];
+            tempArray_2 = [];
+            results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
+            display.textContent = results;
+            number_1 = results;
+            number_2 = 0;
+        }
     }
 });
 
@@ -138,6 +144,21 @@ divid.addEventListener("click", () => {
         tempArray_1 = [];
         operator = '/';
     } else {
+        if (number_1 != 0 && tempArray_1.length != 0){
+            tempArray_2 = tempArray_1.join('');
+            number_2 = parseFloat(tempArray_2);
+            tempArray_1 = [];
+            tempArray_2 = [];
+            results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
+            display.textContent = results;
+            number_1 = results;
+            number_2 = 0;
+        }
+    }
+});
+
+equals.addEventListener("click", () => {
+    if (number_1 != 0 && tempArray_1.length != 0){
         tempArray_2 = tempArray_1.join('');
         number_2 = parseFloat(tempArray_2);
         tempArray_1 = [];
@@ -145,17 +166,7 @@ divid.addEventListener("click", () => {
         results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
         display.textContent = results;
         number_1 = results;
-        number_2 = 0;
     }
-});
-
-equals.addEventListener("click", () => {
-    tempArray_2 = tempArray_1.join('');
-    number_2 = parseFloat(tempArray_2);
-    tempArray_1 = [];
-    tempArray_2 = [];
-    results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
-    display.textContent = results;
 });
 
 let display = document.querySelector('#numberdisplay');

@@ -10,6 +10,16 @@ function operate(number_1, number_2, operator){
     if (operator == "/") return divide(number_1, number_2);
 }
 
+function sum(){
+    tempArray_2 = tempArray_1.join('');
+    number_2 = parseFloat(tempArray_2);
+    tempArray_1 = [];
+    tempArray_2 = [];
+    results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
+    display.textContent = results;
+    number_1 = results;
+}
+
 let number_1 = 0;
 let number_2 = 0;
 let operator = '';
@@ -109,14 +119,7 @@ minus.addEventListener("click", () => {
         operator = '-';
     } else {
         if (number_1 != 0 && tempArray_1.length != 0){
-            tempArray_2 = tempArray_1.join('');
-            number_2 = parseFloat(tempArray_2);
-            tempArray_1 = [];
-            tempArray_2 = [];
-            results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
-            display.textContent = results;
-            number_1 = results;
-            number_2 = 0;
+            sum();
         }
     }
 });
@@ -129,14 +132,7 @@ multip.addEventListener("click", () => {
         operator = '*';
     } else {
         if (number_1 != 0 && tempArray_1.length != 0){
-            tempArray_2 = tempArray_1.join('');
-            number_2 = parseFloat(tempArray_2);
-            tempArray_1 = [];
-            tempArray_2 = [];
-            results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
-            display.textContent = results;
-            number_1 = results;
-            number_2 = 0;
+            sum();
         }
     }
 });
@@ -149,14 +145,7 @@ divid.addEventListener("click", () => {
         operator = '/';
     } else {
         if (number_1 != 0 && tempArray_1.length != 0){
-            tempArray_2 = tempArray_1.join('');
-            number_2 = parseFloat(tempArray_2);
-            tempArray_1 = [];
-            tempArray_2 = [];
-            results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
-            display.textContent = results;
-            number_1 = results;
-            number_2 = 0;
+            sum();
         }
     }
 });
@@ -166,15 +155,9 @@ equals.addEventListener("click", () => {
         alert("Cannot divide by 0");
     } else {
         if (number_1 != 0 && tempArray_1.length != 0){
-            tempArray_2 = tempArray_1.join('');
-            number_2 = parseFloat(tempArray_2);
-            tempArray_1 = [];
-            tempArray_2 = [];
-            results = parseFloat(operate(number_1, number_2, operator).toFixed(3));
-            display.textContent = results;
-            number_1 = results;
+            sum();
         }
-}
+    }
 });
 
 let display = document.querySelector('#numberdisplay');
